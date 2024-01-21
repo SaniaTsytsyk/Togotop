@@ -1,0 +1,104 @@
+.footer__top {
+   border-radius: 20px;
+   background: var(--background-color);
+   padding: 56px 35px;
+   margin-bottom: 60px;
+}
+
+.footer__media {
+   margin-bottom: 72px;
+}
+
+.footer__row {
+   @extend %align-list;
+   gap: 40px;
+   padding-bottom: 25px;
+   border-bottom: 1px solid #3C3C3C;
+   margin-bottom: 32px;
+}
+
+.footer__row-text {
+   color: #949494;
+   font-family: 'Circe', sans-serif;
+   @include font (400, 20px, 147%, null);
+      & a,
+      & span {
+         color: var(--primary-text-color);
+         font-family: 'Circe Bold', sans-serif;
+         @include font (700, 20px, 147%, null);
+      }
+}
+
+.footer__blocks {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 57px;
+}
+
+.footer__block:last-child {
+   grid-column: 2 span;
+   display: flex;
+   justify-content: space-between;
+}
+
+.footer__list {
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+}
+
+.footer__block-title {
+   color: var(--primary-text-color);
+   font-family: 'Manrope', sans-serif;
+   @include font (700, 15px, 20px, null);
+   margin-bottom: 10px;
+}
+
+.footer__link {
+   color: var(--primary-text-color);
+   display: block;
+   font-family: 'Manrope', sans-serif;
+   @include font (null, 13px, 23px, null);
+   opacity: .6;
+   transition: opacity .2s;
+      &:hover {
+         text-decoration: underline;
+         opacity: .9;
+      }
+}
+
+.footer__block-link {
+   color: var(--primary-text-color);
+   font-family: 'Manrope', sans-serif;
+   @include font (700, 15px, 20px, null);
+}
+
+.footer__soc {
+   position: relative;
+   display: flex;
+   align-items: baseline;
+   top: -32px;
+   gap: 10px;
+}
+
+.footer__soc-link {
+   width: 52px;
+   height: 52px;
+   @extend %align-list;
+   justify-content: center;
+   border-radius: 100%;
+   background: var(--accent-color);
+}
+
+.footer__bottom {
+   @extend %align-list;
+   justify-content: space-between;
+   margin-bottom: 60px;
+}
+
+.footer__bottom-text {
+   color: var(--primary-text-color);
+   font-family: 'Circe', sans-serif;
+   @include font (null, 14px, 22px, null);
+   opacity: .7;
+}

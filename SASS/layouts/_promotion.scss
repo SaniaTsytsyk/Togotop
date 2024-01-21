@@ -1,0 +1,62 @@
+.promotion {
+   margin-bottom: 59px;
+   position: relative;
+      &__container {
+         position: relative;
+            &::after {
+               content: "";
+               position: absolute;
+               bottom: -55%;
+               left: 50%;
+               width: 500px;
+               height: 200px;
+               background-image: url("../img/promotion/promotion-element2.svg");
+               background-repeat: no-repeat;
+               background-position: center;
+               transform: translateX(-50%);
+               z-index: -1;
+            }
+      }
+         &::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: 0;
+            width: 500px;
+            height: 200px;
+            background-image: url("../img/promotion/promotion-element.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: -1;
+         }
+            &::after {
+               content: "";
+               position: absolute;
+               bottom: -50%;
+               right: 0;
+               width: 500px;
+               height: 200px;
+               background-image: url("../img/promotion/promotion-element.svg");
+               background-repeat: no-repeat;
+               background-position: center;
+               z-index: -1;
+            }
+               &__title {
+                  text-align: center;
+               }
+                  &__text {
+                     color: var(--primary-text-color);
+                     font-family: 'Circe', sans-serif;
+                     @include font (400, 30px, 147%, null);
+                     margin-bottom: 56px;
+                     text-align: center;
+                  }
+                     &__link {
+                        @extend %align-list;
+                        justify-content: center;
+                     }
+                        &__btn {
+                           display: block;
+                           background-color: var(--title-green-color);
+                        }
+}

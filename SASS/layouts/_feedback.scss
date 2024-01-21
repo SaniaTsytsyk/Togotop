@@ -1,0 +1,33 @@
+.feedback {
+   margin-bottom: 150px;
+   &__content {
+         display: flex;
+         gap: 30px;
+         justify-content: space-between;
+      }
+   
+      &__media {
+         position: relative;
+         right: -9%;
+         margin-right: -50px;
+      }
+   
+      &__sub-title {
+         color: #D5D5D5;
+         font-family: 'Circe', sans-serif;
+         @include font (400, 20px, 147%, null);
+         margin-bottom: 24px;
+      }
+   
+      &__content-text {
+         color: var(--primary-text-color);
+         font-family: 'Circe', sans-serif;
+         @include font (400, 20px, 147%, null);
+         margin-bottom: 42px;
+      }
+   
+      &__btn {
+         display: block;
+         padding: 21px 65px 21px 75px;
+      }
+}

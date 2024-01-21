@@ -1,0 +1,14 @@
+.title {
+   font-family: 'Inter', sans-serif;
+   color: var(--primary-text-color);
+   @include font (700, 45px, 120%, 0.03em);
+   margin-bottom: 50px;
+
+   .span-green {
+      color: var(--title-green-color);
+   }
+   
+   .span-violet {
+      color: var(--accent-color);
+   }
+}

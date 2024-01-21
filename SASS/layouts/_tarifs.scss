@@ -1,0 +1,155 @@
+.tarifs {
+   margin-bottom: 172px;
+   &__title {
+         margin-bottom: 23px;
+      }
+      &__text {
+         color: var(--primary-text-color);
+         font-family: 'Circe', sans-serif;
+         @include font (700, 24px, 167%, null);
+         max-width: 501px;
+         width: 100%;
+         margin-bottom: 70px;
+      }
+         &__buttons {
+            @extend %align-list;
+            gap: 55px;
+            justify-content: space-between;
+            margin-bottom: 113px;
+         }
+            &__btn {
+                  font-size: 24px;
+                  width: 100%;
+                  padding-top: 21px;
+                  padding-bottom: 21px;
+                  &.active {
+                     background-color: var(--accent-color);
+                  }
+               }
+                  &__blocks {
+                     display: grid;
+                     grid-template-columns: repeat(8, 1fr);
+                  }
+                     &__block {
+                        border-radius: 8px;
+                        padding: 0px 10px 37px;
+                        overflow: hidden;
+                        &:nth-child(1) {
+                              border: 1px solid var(--background-color);
+                              background: #2B2B2B;
+                           }
+                           &:nth-child(2) {
+                              background: #424242;
+                           }
+                              &:nth-child(3) {
+                                 background: #394C50;
+                              }
+                                 &:nth-child(4) {
+                                    background: #335E67;
+                                 }
+                                    &:nth-child(5) {
+                                       background: #B96333;
+                                    }
+                                       &:nth-child(6) {
+                                             background: #3F91B2;
+                                       }
+                                          &:nth-child(7) {
+                                             background: #946CA5;
+                                          }
+                                             &:nth-child(8) {
+                                                background: var(--title-green-color);
+                                             }
+                     }
+                        &__block-wrapper {
+                           transform: scaleY(0.82);
+                        }
+                           &__block-title {
+                              @extend %align-list;
+                              flex-direction: column;
+                              justify-content: center;
+                              height: 84px;
+                              color: var(--primary-text-color);
+                              text-align: center;
+                              font-family: 'Circe', sans-serif;
+                              @include font (700, 20px, 120%, null);
+                              border-bottom: 1px solid var(--primary-text-color);
+                              margin-bottom: 16px;
+                           }
+                              &__block-btn {
+                                 font-size: 14px;
+                                 margin-top: 11px;
+                                 display: block;
+                                 padding: 12px 28px;
+                                 margin-bottom: 27px;
+                              }
+                                 &__name {
+                                    color: var(--primary-text-color);
+                                    text-align: center;
+                                    font-family: 'Circe', sans-serif;
+                                    @include font (350, 15px, 120%, null);
+                                    margin-bottom: 7px;
+                                 }
+                                    &__value {
+                                       color: var(--primary-text-color);
+                                       text-align: center;
+                                       font-family: 'Circe', sans-serif;
+                                       @include font (700, 20px, 120%, null);
+                                       margin-bottom: 11px;
+                                    }
+                                       &__text-title {
+                                          color: var(--primary-text-color);
+                                          text-align: center;
+                                          font-family: 'Circe', sans-serif;
+                                          @include font (700, 18px, 120%, null);
+                                          margin-bottom: 17px;
+                                       }
+                                          &__block-list {
+                                             align-items: flex-start;
+                                          }
+                                             &__item {
+                                                @extend %align-list;
+                                                color: var(--primary-text-color);
+                                                font-family: 'Circe', sans-serif;
+                                                @include font (400, 10px, 100%, -0.03em);
+                                                transition: opacity .2s;
+                                             }
+                                                &__item-span {
+                                                   @include font (700, 12px, null, null);
+                                                }
+                                                   &__item-media {
+                                                      padding-right: 10px;
+                                                   }
+}
+
+.tarifs__blocks.redemption .tarifs__block {
+   height: 417px;
+}
+
+.tarifs__blocks.redemption .tarifs__block:not(:first-child) div .tarifs__block-list li:nth-child(n + 3) {
+   visibility: hidden;
+   opacity: 0;
+}
+
+.tarifs__blocks.redemption .tarifs__block:first-child {
+   height: 100%;
+}
+
+.tarifs__blocks.redemption .tarifs__block-wrapper {
+   transform: scaleY(0.88);
+}
+
+.tarifs__block.premium {
+   transform: scaleY(1.2);
+   transition: transform .2s;
+}
+
+.tarifs__block-text.free .tarifs__block-list {
+   @extend %align-list;
+   flex-direction: column;
+   gap: 18px;
+}
+
+.tarifs__block-text.free .tarifs__item {
+   text-align: center;
+   padding: 0;
+}

@@ -1,0 +1,38 @@
+.why {
+   margin-bottom: 140px;
+   &__block-background {
+         border-radius: 20px;
+         background: var(--background-color);
+         padding: 63px 52px;
+      }
+      &__block {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 42px;
+      }
+         &__blocks {
+            border-radius: 20px;
+            background: var(--accent-color);
+            @extend %align-list;
+            flex-direction: column;
+            position: relative;
+            padding: 22px 27px 22px 27px;
+            z-index: 999;
+         }
+            &__blocks-media {
+               margin-bottom: 32px;
+            }
+               &__blocks-title {
+                  color: var(--primary-text-color);
+                  text-align: center;
+                  font-family: 'Circe', sans-serif;
+                  @include font (800, 25px, 117%, null);
+                  margin-bottom: 34px;
+               }
+                  &__blocks-text {
+                     color: var(--primary-text-color);
+                     text-align: center;
+                     font-family: 'Circe', sans-serif;
+                     @include font (700, 20px, 167%, null);
+                  }
+}

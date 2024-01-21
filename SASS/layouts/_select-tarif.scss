@@ -1,0 +1,133 @@
+.select-tarif {
+   margin-bottom: 145px;
+   &__title {
+         margin-bottom: 51px;
+      }
+         &__text {
+            color: var(--primary-text-color);
+            font-family: 'Circe', sans-serif;
+            @include font (null, 20px, 167%, null);
+            margin-bottom: 69px;
+            max-width: 931px;
+         }
+            &__blocks {
+               border-radius: 20px;
+               background: var(--background-color);
+               padding: 30px 50px;
+               @extend %align-list;
+               justify-content: space-between;
+            }
+               &__block-title {
+                  color: var(--primary-text-color);
+                  font-family: 'Circe', sans-serif;
+                  @include font (700, 25px, 147%, null);
+                  margin-bottom: 30px;
+               }
+                  &__block-left {
+                     flex: 0 1 50%;
+                     display: flex;
+                     flex-direction: column;
+                     gap: 70px;
+                     border-right: 1px solid #363636;
+                     padding-right: 43px;
+                  }
+                     &__grid {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 22px;
+                     }
+                        &__btn {
+                           padding-left: 0;
+                           padding-right: 0;
+                           width: 100%;
+                           display: block;
+                        }
+                           &__grid.bottom .select-tarif__btn {
+                              border: none;
+                              &:nth-child(1) {
+                                    background-color: #424242;
+                                 }
+                                    &:nth-child(2) {
+                                       background-color: #3D4C4F;
+                                    }
+                                       &:nth-child(3) {
+                                          background-color: #3D5D66;
+                                       }
+                                          &:nth-child(4) {
+                                             background-color: #AE673D;
+                                          }
+                                             &:nth-child(5) {
+                                                background-color: #5490AF;
+                                             }
+                                                &:nth-child(6) {
+                                                   background-color: #8E6EA1;
+                                                }
+                                                   &:nth-child(7) {
+                                                      background-color: #5AB381;
+                                                   }
+                           }
+                              &__block-right {
+                                 flex: 0 1 50%;
+                                 padding-left: 43px;
+                                 display: flex;
+                                 flex-direction: column;
+                                 justify-content: center;
+                              }
+                                 &__right-blocks {
+                                    @extend %align-list;
+                                    gap: 40px;
+                                 }
+                                    .select-tarif__right-block {
+                                       flex: 0 1 50%;
+                                       &.circle {
+                                          border-radius: 100%;
+                                          border: 21px solid var(--primary-text-color);
+                                          width: 278px;
+                                          height: 278px;
+                                          flex: 0 0 50%;
+                                          @extend %align-list;
+                                          flex-direction: column;
+                                          justify-content: center;
+                                       }
+                                    }
+                                       &__right-block-percent {
+                                          color: var(--primary-text-color);
+                                          font-family: 'Circe', sans-serif;
+                                          @include font (800, 50px, 147%, null);
+                                       }
+                                          &__right-block-pay {
+                                             color: var(--primary-text-color);
+                                             font-family: 'Circe', sans-serif;
+                                             @include font (700, 55px, 147%, null);
+                                             margin-bottom: 9px;
+                                          }
+                                             &__right-btn {
+                                                font-size: 20px;
+                                                display: flex;
+                                                justify-content: center;
+                                                padding-top: 10px;
+                                                padding-bottom: 10px;
+                                                white-space: nowrap;
+                                                margin-bottom: 38px;
+                                             }
+                                                &__text-bottom {
+                                                   color: #737373;
+                                                   font-family: 'Circe', sans-serif;
+                                                   @include font (null, 15px, 157%, null);
+                                                }
+                                                   &__right-block-text {
+                                                      color: var(--primary-text-color);
+                                                      font-family: 'Circe', sans-serif;
+                                                      @include font (null, 22px, 147%, null);
+                                                      margin-bottom: 4px;
+                                                         & {
+                                                            color: var(--primary-text-color);
+                                                            text-align: center;
+                                                            font-family: 'Circe', sans-serif;
+                                                            @include font (null, 16px, 157%, null);
+                                                            max-width: 118px;
+                                                            margin-bottom: 6px;
+                                                         }
+                                                      }
+}
+

@@ -1,0 +1,33 @@
+.program {
+   margin-bottom: 172px;
+      &__blocks {
+         @extend %align-list;
+         justify-content: space-between;
+         border-radius: 20px;
+         background: linear-gradient(90deg, var(--title-green-color) 0%, var(--accent-color) 100%);
+      }
+         &__block-title {
+            margin-bottom: 31px;
+            max-width: 595px;
+         }
+            &__block-content {
+               flex: 0 1 50%;
+               padding: 48px 58px;
+            }
+               &__block-text {
+                  color: var(--primary-text-color);
+                  font-family: 'Circe', sans-serif;
+                  @include font (700, 20px, 167%, null);
+                  margin-bottom: 42px;
+                  max-width: 394px;
+               }
+                  &__block-buttons {
+                     margin-bottom: 11px;
+                  }
+                     &__block-media {
+                        flex: 0 1 50%;
+                        @extend %align-list;
+                        justify-content: center;
+                        padding: 69px 88px 0 58px;
+                     }
+}

@@ -1,0 +1,37 @@
+.all-on-key {
+   margin-bottom: 178px;
+   &__container {
+         @extend %align-list;
+         justify-content: space-between;
+         gap: 16px;
+      }
+            &__sub-title {
+               color: var(--primary-text-color);
+               @include font (null, 20px, 147%, null);
+               font-family: 'Circe', sans-serif;
+               margin-bottom: 76px;
+            }
+                        &__blocks {
+                           display: grid;
+                           grid-template-columns: repeat(2, 1fr);
+                           gap: 40px;
+                           margin-bottom: 78px;
+                        }
+            
+                           &__block-title {
+                              color: var(--primary-text-color);
+                              font-family: 'Circe', sans-serif;
+                              @include font (800, 25px, 147%, null);
+                              margin-bottom: 5px;
+                           }
+            
+                           &__block-text {
+                              color: var(--primary-text-color);
+                              font-family: 'Circe', sans-serif;
+                              @include font (400, 20px, 147%, null);
+                           }
+            
+                           &__btn {
+                              display: inline-block;
+                           }
+}

@@ -1,0 +1,35 @@
+.partners-hero {
+   margin-bottom: 130px;
+   &__container {
+         @extend %align-list;
+         gap: 30px;
+      }
+      &__sub-title {
+         color: var(--primary-text-color);
+         font-family: 'Circe', sans-serif;
+         @include font (350, 20px, 147%, null);
+         margin-bottom: 13px;
+      }
+         &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            margin-bottom: 88px;
+         }
+            &__item {
+               @extend %align-list;
+               gap: 15px;
+            }
+               &__item-text {
+                  color: var(--primary-text-color);
+                  font-family: 'Circe', sans-serif;
+                  @include font (400, 20px, 134%, null);
+               }
+                  &__item-span {
+                     font-weight: 800;
+                  }
+                     &__btn {
+                        display: inline-block;
+                     }
+}
+
